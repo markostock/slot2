@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./stylecoindice.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <title>Slottipeli</title>
+</head>
+
+<!--SKENAARIO-->
+<div class="skenaario">
+<h2 id="numero">0</h2>
+<h3 id="voitto">Ei valittuna</h3>
+</div>
+
+<!--SLOTTI-->
+
+<body>
+    <div class="container">
+      <div class="slotcontainer">
+        <div class="slot">
+          <div class="symbols" id="slot1Symbols"></div>
+        </div>
+  
+        <div class="slot">
+          <div class="symbols" id="slot2Symbols"></div>
+        </div>
+  
+        <div class="slot">
+          <div class="symbols" id="slot3Symbols"></div>
+        </div>
+        
+      </div>
+  
+      <div class="pelinappulat">
+        <input type="image" style="max-width: 75px; max-height: 75px;" id="spin" onclick="spin();spinner.play();" onmouseover="this.src='./spinover.png'" class="btn" src="./spin.png" onmouseout="this.src='./spin.png';"></input>
+    </div>
+      <button onclick="reset();" style="margin: 10px;" id="reset" hidden>Reset</button>
+    </div>
+    
+<!--SKENAARIONAPPULAT-->
+
+<div class="controlscontainer">
+  <button onclick="stream12h();" style="background: #FFB600;" id="skenaarionappulat">12h stream (401)</button>
+  <button onclick="hesselmerch();" style="background: #FFB600;" id="skenaarionappulat">Merch Giveaway (402)</button>
+  <button onclick="Lamps4makeup();" style="background: #FFB600;" id="skenaarionappulat">Lamps4makeup (403)</button>
+  <button onclick="randomskenaario();" style="background: #00AA00;" id="skenaarionappulat">Randomskenaario</button>
+  <button onclick="tunninpidennys();" style="background: #a7a7a7;" id="skenaarionappulat">Striimi pitenee 1h (501)</button>
+  <button onclick="peruukkipois();" style="background: #a7a7a7;" id="skenaarionappulat">Peruukki pois 30min (502)</button>
+  <button onclick="voicechanger();" style="background: #a7a7a7;" id="skenaarionappulat">Voice changer 15min (503)</button>
+</div>
+
+<div class="hardreset">
+<button onClick="window.location.reload();">Reset</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--SWEET ALERT 2-->
+
+    <script src="./script.js"></script>
+    <script src="./scriptcoindice.js"></script>
+
+  </body>
+  
+  </html>
