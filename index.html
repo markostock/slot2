@@ -15,10 +15,31 @@
 <h3 id="voitto">Ei valittuna</h3>
 </div>
 
+<!--KOLIKKO JA NOPPA-->
+
+<div class="container">
+  <div class="coin" id="coin">
+      <div class="heads">
+          <img src="star.png">
+      </div>
+      <div class="tails">
+          <img src="moon.png">
+      </div>
+  </div>
+      <div class="dice" style="margin-top: 20px;">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+      </div>
+</div>
+
 <!--SLOTTI-->
 
 <body>
-    <div class="container">
+    <div class="container" style="margin-top: 20px;">
       <div class="slotcontainer">
         <div class="slot">
           <div class="symbols" id="slot1Symbols"></div>
@@ -35,18 +56,21 @@
       </div>
   
       <div class="pelinappulat">
+        <input type="image" style="max-width: 75px; max-height: 75px; margin-right: 8px;" id="flip-button" class="btn" onmousedown="kolikko.play()" src="./coin.png" onmouseover="this.src='./coinover.png';"  onmouseout="this.src='./coin.png';"></input>
         <input type="image" style="max-width: 75px; max-height: 75px;" id="spin" onclick="spin();spinner.play();" onmouseover="this.src='./spinover.png'" class="btn" src="./spin.png" onmouseout="this.src='./spin.png';"></input>
+        <input type="image" style="max-width: 75px; max-height: 75px;" id="dice" onmousedown="noppa.play()" class="roll" src="./dice.png" onmouseover="this.src='./diceover.png';" onmouseout="this.src='./dice.png';"></input>
     </div>
       <button onclick="reset();" style="margin: 10px;" id="reset" hidden>Reset</button>
     </div>
     
 <!--SKENAARIONAPPULAT-->
 
-<div class="controlscontainer">
+<div class="controlscontainer" style="margin-top: 20px;"
+>
   <button onclick="stream12h();" style="background: #FFB600;" id="skenaarionappulat">12h stream (401)</button>
   <button onclick="hesselmerch();" style="background: #FFB600;" id="skenaarionappulat">Merch Giveaway (402)</button>
   <button onclick="Lamps4makeup();" style="background: #FFB600;" id="skenaarionappulat">Lamps4makeup (403)</button>
-  <button onclick="randomskenaario();" style="background: #00AA00;" id="skenaarionappulat">Randomskenaario</button>
+  <button onclick="randomskenaario();" style="background: #00AA00;" id="skenaarionappulat">Randomskenaario (1-75)</button>
   <button onclick="tunninpidennys();" style="background: #a7a7a7;" id="skenaarionappulat">Striimi pitenee 1h (501)</button>
   <button onclick="peruukkipois();" style="background: #a7a7a7;" id="skenaarionappulat">Peruukki pois 30min (502)</button>
   <button onclick="voicechanger();" style="background: #a7a7a7;" id="skenaarionappulat">Voice changer 15min (503)</button>
@@ -64,5 +88,5 @@
     <script src="./scriptcoindice.js"></script>
 
   </body>
-  
+
   </html>
